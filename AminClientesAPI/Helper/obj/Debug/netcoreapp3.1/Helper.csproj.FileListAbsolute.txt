@@ -1,0 +1,11 @@
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.exe
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\obj\Debug\netcoreapp3.1\Helper.csprojAssemblyReference.cache
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+C:\Users\j.castano\Desktop\AdminClientes\AminClientesAPI\Helper\obj\Debug\netcoreapp3.1\Helper.pdb

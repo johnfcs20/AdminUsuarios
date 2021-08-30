@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AminClientesAPI", "AminClientesAPI\AminClientesAPI.csproj", "{71FE56D2-5202-4354-A113-6286685EC5AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "core\core.csproj", "{69B755C3-79AB-41A4-B4AA-5C1DAF65537C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{EA0E72C8-9529-4305-B07C-18761086953C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71FE56D2-5202-4354-A113-6286685EC5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FE56D2-5202-4354-A113-6286685EC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FE56D2-5202-4354-A113-6286685EC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FE56D2-5202-4354-A113-6286685EC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B755C3-79AB-41A4-B4AA-5C1DAF65537C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B755C3-79AB-41A4-B4AA-5C1DAF65537C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B755C3-79AB-41A4-B4AA-5C1DAF65537C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B755C3-79AB-41A4-B4AA-5C1DAF65537C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0E72C8-9529-4305-B07C-18761086953C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0E72C8-9529-4305-B07C-18761086953C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0E72C8-9529-4305-B07C-18761086953C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0E72C8-9529-4305-B07C-18761086953C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEE540D8-FB77-492E-BC2B-45FF41DC30AE}
+	EndGlobalSection
+EndGlobal
