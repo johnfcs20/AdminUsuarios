@@ -43,6 +43,8 @@ namespace AminClientesAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(Builder => Builder.WithOrigins("*").WithMethods("GET", "POST", "PUT").AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
