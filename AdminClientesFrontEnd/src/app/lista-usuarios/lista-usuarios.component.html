@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" type="submit" style="float: right; margin-right: 20px; margin-top: 20px;" data-target="#crud-cliente" *ngIf="!loading"> + Agregar Cliente</button>
+
+<div style="margin-top: 60px;" *ngIf="!loading"> 
+    <div class="alert alert-dark" role="alert" *ngIf="usuariosLista.length === 0">
+            No hay usuarios registrados
+    </div>
+
+
+    <table class="table table-striped" style="clear: both;" >
+  <thead *ngIf="usuariosLista.length > 0">
+    <tr style="text-align: center;">
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col" >Genero</th>
+      <th scope="col" >Departamento</th>
+      <!-- <th scope="col" >Acciones</th> -->
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuariosLista" style="text-align: center;">
+     <td>{{usuario.usuario_Nombres | titlecase}}</td>
+     <td>{{usuario.usuario_Apellidos | titlecase}}</td>
+     <td>{{usuario.usuario_Genero | titlecase}}</td>
+     <td>{{usuario.departamento_Descripcion | titlecase}}</td>
+
+    <!-- <th scope="col">
+        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#crud-cliente"> <i class="fas fa-pencil-alt"></i></button>
+        <button class="btn btn-danger" type="submit"> <i class="fas fa-trash"></i></button>
+      </th> -->
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="modal fade" id="crud-cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="idUsuario === 0">Agegar Cliente</h5>
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="idUsuario != 0">Editar Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="limpiarForm()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <form [formGroup]="crudUsuario">
+      <div class="modal-body">
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombres:</label>
+            <input type="text" class="form-control" id="recipient-name" formControlName="nombres">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Apellidos:</label>
+            <input type="text" class="form-control" id="recipient-name" formControlName="apellidos">
+          </div>
+         <div class="form-group">
+            <label for="message-text" class="col-form-label">Genero:</label>
+              <ng-select [items]="sexo" 
+                        bindLabel="descripcion" 
+                        bindValue="value" 
+                         [clearable]="false"
+                        formControlName="genero">
+              </ng-select>
+
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Cedula:</label>
+            <input type="text" class="form-control" id="recipient-name"  type="number" formControlName="cedula">
+          </div>
+         <div class="form-group">
+            <label for="message-text" class="col-form-label">Fecha de nacimiento:</label>
+                   <my-date-picker formControlName="fechaNacimineto" [options]="myDatePickerOptions"
+                    (dateChanged)="onDateChanged($event)"></my-date-picker>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Departamento:</label>
+              <ng-select [items]="departamentoLista" 
+                        bindLabel="departamento_Descripcion" 
+                        bindValue="depatamento_ID" 
+                         [clearable]="false"
+                        formControlName="departamento">
+              </ng-select>
+          </div>
+           <div class="form-group">
+            <label for="message-text" class="col-form-label">Cargo:</label>
+            <input type="text" class="form-control" id="recipient-name" formControlName="cargo">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Supervisor:</label>
+             <input type="text" class="form-control" id="recipient-name" formControlName="supervisor">
+          </div>
+     
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="limpiarForm()">Cerrar</button>
+         <button type="button" class="btn btn-primary"  data-dismiss="modal" *ngIf="crudUsuario.valid" (click)="insertarUsuarios()">Guardar</button>
+      </div>
+         </form>
+    </div>
+  </div>
+</div>
